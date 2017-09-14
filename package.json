@@ -1,7 +1,7 @@
 {
   "name": "restful-ws",
   "version": "1.0.0",
-  "description": "",
+  "description": "Curso de webservice restful com restify do Vedovelli",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
