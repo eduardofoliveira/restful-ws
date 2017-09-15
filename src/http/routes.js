@@ -4,6 +4,10 @@ const routes = (server) => {
     server.post('autenticacao', async (req, res, next) => {
         try {
             const {email, password} = req.params;
+            if(!email || !password){
+                res.send({error: 'email ou senha não fornecidos'});
+                return;
+            }
             res.send(await db.auth().authenticate(email, password));
         } catch (error) {
             res.send(error);
